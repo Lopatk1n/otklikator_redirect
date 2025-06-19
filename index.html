@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to Telegram...</title>
+</head>
+<body>
+  <p>Redirecting to Telegram bot...</p>
+  <script>
+    const url = new URL(window.location.href);
+    const code = url.searchParams.get("code");
+    const state = url.searchParams.get("state");
+    const telegramUrl = `https://t.me/Otklikator_bot?start=${code}_${state}`;
+
+    window.location.href = telegramUrl;
+  </script>
+</body>
+</html>
